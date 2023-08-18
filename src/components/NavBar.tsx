@@ -1,10 +1,10 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
 import NavLinks from './NavBar.json'
 
 function NavBar() {
-	const [isDropdownOpen, setDropdownOpen] = useState(false);
+	//const [isDropdownOpen, setDropdownOpen] = useState(false);
 	return (
 		<nav className="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
 			<div className="container-fluid">
