@@ -1,18 +1,32 @@
-import {useState} from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
+import About from "./pages/About";
+import Help from "./pages/Help";
 
 function App() {
-	const [alertVisible, setAlertVisible] = useState(false)
+	// Set title of page
+	useEffect(() => {
+		document.title = "Home";
+	}, []);
 
-  return (
-	  <>
-	<div className="container-sm">100% wide until small breakpoint</div>
-	<div className="container-md">100% wide until medium breakpoint</div>
-	<div className="container-lg">100% wide until large breakpoint</div>
-	<div className="container-xl">100% wide until extra large breakpoint</div>
-	<div className="container-xxl">100% wide until extra extra large breakpoint</div>
-	</>
-  );
-  // Self closing syntax: <Message />
+	return (
+		<Router>
+			<div className="dark-theme">
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<Home />} />
+						<Route path="about" element={<About />} />
+						<Route path="help" element={<Help />} />
+						<Route path="*" element={<NoPage />} />
+					</Route>
+				</Routes>
+			</div>
+		</Router>
+	);
+	// Self closing syntax: <Message />
 }
 
 export default App;
