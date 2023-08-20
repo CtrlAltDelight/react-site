@@ -1,13 +1,16 @@
 import { Helmet } from "react-helmet";
-function NoPage() {
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./cattpuccin.css";
+import "./Home.css";
+
+function Gimble() {
 	return (
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>404</title>
-				<link rel="canonical" href="/404" />
+				<title>CJ Home</title>
+				<link rel="canonical" href="/" />
 			</Helmet>
-
 			<div id="image-backing" className="image-backing">
 				<a href="/gimble">
 					<img
@@ -23,13 +26,16 @@ function NoPage() {
 				</a>
 				<div className="main-body cat-bg-dark cat-fg-secondary">
 					<h1>404</h1>
-					<img src="/snail_animated.gif" style={{}} />
+					<img
+						src="/gimblefavicon.png"
+						style={{
+						}}
+					/>
 					<p>NOT PUDDING</p>
-					<p>Email lc@ctrlaltdelight.org for more sites like this.</p>
 				</div>
 			</div>
 		</>
 	);
 }
 
-export default NoPage;
+export default Gimble;

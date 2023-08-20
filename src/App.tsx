@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import Gimble from "./pages/Gimble";
 import NoPage from "./pages/NoPage";
 import About from "./pages/About";
-import Help from "./pages/Help";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './pages/cattpuccin.css';
 
@@ -26,7 +26,7 @@ function App() {
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
 						<Route path="cv" element={<About />} />
-						<Route path="help" element={<Help />} />
+						<Route path="gimble" element={<Gimble />} />
 						<Route path="*" element={<NoPage />} />
 					</Route>
 				</Routes>
