@@ -3,6 +3,7 @@ import ListGroup from "../components/ListGroup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cattpuccin.css";
 import "./Home.css";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function Home() {
 	let awards = [
@@ -23,9 +24,9 @@ function Home() {
 				<title>Home</title>
 				<link rel="canonical" href="/" />
 			</Helmet>
-			<div id="image-backing">
-			<div className="main-body cat-bg-dark cat-fg-secondary">
-			<div style={{ display: 'flex', margin: ' 0px 5rem 1.5rem 5rem'}}>
+			<Parallax pages={2} style={{backgroundColor: 'black'}}>
+				<ParallaxLayer offset={0} speed={1.5} className='cat-bg-dark' style={{backgroundSize: 'cover'}}>
+			<div style={{ display: 'flex', margin: ' 100px 5rem 1.5rem 5rem'}}>
 			<img src="/headshot.jpg" style={{ width: "100%", height: '300px', objectFit: 'cover'}} />
 				<p style={{ margin: '15px' }}>
 <h1>Bio</h1>
@@ -43,6 +44,8 @@ function Home() {
 					off your order. Fill your quota today!
 				</p>
 	</div>
+				</ParallaxLayer >
+				<ParallaxLayer offset={0.75} speed={2.5} >
 				<h1>Project Info</h1>
 				<p>
 					<strong>She's The Man</strong> - Half-hour comedy series - Serialized
@@ -79,9 +82,11 @@ function Home() {
 					<br />
 					<br />
 				</p>
+				</ParallaxLayer>
+				<ParallaxLayer offset={0.9} speed={1.0} className='cat-bg-light'>
 				<ListGroup items={awards} heading="Awards" />
-			</div>
-			</div>
+				</ParallaxLayer>
+			</Parallax>
 		</>
 	);
 }

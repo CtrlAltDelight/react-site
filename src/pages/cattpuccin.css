@@ -52,6 +52,10 @@
 	background-color: var(--mantle);
 }
 
+.cat-bg-light {
+	background-color: var(--overlay0);
+}
+
 .cat-text {
 	color: var(--text);
 }

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { scaleDown as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
 import NavLinks from '../components/NavBar.json'
 
