@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import About from "./pages/About";
 import Help from "./pages/Help";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './pages/cattpuccin.css';
 
 function App() {
 	// Set title of page

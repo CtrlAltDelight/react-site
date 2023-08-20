@@ -1,24 +1,26 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { elastic as Menu } from 'react-burger-menu';
+import { scaleDown as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
+import NavLinks from '../components/NavBar.json'
 
 function Layout() {
 	return (
-		<>
-			<NavBar />
-			<div id="outer-container">
-				{/* hamburger menu button TODO make it use NavBar.json */}
-				<Menu right outerContainerId="outer-container" pageWrapId="page-wrap">
-					<NavLink className="nav-link" to="/">
-						home
+		<div id="outer-container">
+			{/* hamburger menu button */}
+			<Menu outerContainerId="outer-container" pageWrapId="page-wrap">
+
+				{NavLinks.Links.map((link) => (
+					<NavLink className="nav-link" to={link.route}>
+						{link.name}
 					</NavLink>
-				</Menu>
-				<main id="page-wrap">
-					<Outlet />
-				</main>
-			</div>
-		</>
+				))}
+			</Menu>
+			<main id="page-wrap">
+			<NavBar showLinks />
+				<Outlet />
+			</main>
+		</div>
 	);
 }
 

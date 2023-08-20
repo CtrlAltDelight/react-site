@@ -1,0 +1,31 @@
+.background-blur {
+  position: relative;
+  width: 100%; /* or your preferred width */
+  height: 500px; /* or your preferred height */
+  overflow: hidden; /* to ensure the pseudo-element doesn't overflow */
+}
+
+.background-blur::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+	background-image: url('sebastian-svenson-unsplash.jpg');
+  filter: blur(25px);
+  z-index: -1; /* to ensure the background stays behind the content */
+}
+
+.main-body {
+	margin: 0px 10% 0px 10%;
+	padding: 2rem;
+}
+
+strong {
+	color: var(--mauve);
+}
+
+#image-backing {
+	background-color: var(--surface2);
+}

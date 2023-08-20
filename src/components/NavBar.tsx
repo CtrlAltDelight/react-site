@@ -1,26 +1,69 @@
-//import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import './NavBar.css';
-import NavLinks from './NavBar.json'
+import "./NavBar.css";
+import NavLinks from "./NavBar.json";
+import "../pages/cattpuccin.css";
 
-function NavBar() {
+interface Props {
+	showLinks?: boolean;
+	logoImg?: string | null;
+}
+
+function NavBar({ showLinks, logoImg = null }: Props) {
+/* resizing using state (now using css)
+	const [isScreenSmall, setIsScreenSmall] = useState(false);
+	useEffect(() => {
+		// define resize handler
+		const handleResize = () => {
+			console.log(window.innerWidth);
+			setIsScreenSmall(window.innerWidth <= 768);
+		};
+
+		// Call once to set the correct state on mount
+		handleResize();
+
+		// Attach the resize handler
+		window.addEventListener("resize", handleResize);
+
+		// Clean up the event listener when the component unmounts
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+*/
 	//const [isDropdownOpen, setDropdownOpen] = useState(false);
 	return (
-		<nav className="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+		<nav
+			className="navbar cat-bg-primary navbar-expand-lg"
+			style={{ top: 0, position: "sticky", height: "5rem" }}
+			data-bs-theme="dark"
+		>
 			<div className="container-fluid">
-				<NavLink className="navbar-brand" to="/">
-					<img src="night_city.png" width="50" height="50" />
-				</NavLink>
-				<div className="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul className="navbar-nav">
-						{NavLinks.Links.map((link, index) => (
-						<li className="nav-item" key={index}>
-							<NavLink className="nav-link" to={link.route}>
-								{link.name}
-							</NavLink>
-						</li>
-						))}
-						{/*
+				{logoImg != null && (
+					<NavLink className="navbar-brand" to="/">
+						<img src="night_city.png" width="50" height="50" />
+					</NavLink>
+				)}
+				<div className="" id="navbarSupportedContent">
+					{showLinks && (
+						<ul className="navbar-nav">
+							{NavLinks.Links.map((link, index) => (
+								<li className="navLink nav-item" key={index}>
+									<NavLink className="nav-link" to={link.route}>
+										{link.name}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					)}
+				</div>
+			</div>
+		</nav>
+	);
+}
+
+{
+	/* Code for dropdown links
 						<li
 							className="nav-item"
 							onMouseEnter={(e) => {
@@ -52,12 +95,7 @@ function NavBar() {
 									help
 								</NavLink>
 							</div>
-						</li>*/}
-					</ul>
-				</div>
-			</div>
-		</nav>
-	);
+						</li>*/
 }
 
 export default NavBar;

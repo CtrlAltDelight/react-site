@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../pages/cattpuccin.css";
 
 // Props are essentially parameters for the react component
 // Props are immutable (read-only!)
@@ -6,15 +7,14 @@ interface Props {
 	items: string[];
 	heading: string;
 
-	onSelectItem: (item: string) => void; // kind of like onClick
+	//onSelectItem?: (item: string) => void; // kind of like onClick
 }
 
-function ListGroup({ items, heading, onSelectItem }: Props) {
+function ListGroup({ items, heading }: Props) {
 	// Hook
 	// State is mutable, similar to local variables, and managed by component
 	// Both state and props will cause a re-render when changed.
-	const [selectedIndex, setSelectedIndex] = useState(-1);
-	// uses this syntax: const [name, setName] = useState('');
+	const [selectedIndex, setSelectedIndex] = useState(-1); // uses this syntax: const [name, setName] = useState('');
 
 	// <> tells react to use a fragment
 	return (
@@ -30,9 +30,11 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 								? "list-group-item active"
 								: "list-group-item"
 						}
-						onClick={() => {
+						onMouseEnter={() => {
 							setSelectedIndex(index);
-							onSelectItem(item);
+						}}
+						onMouseLeave={() => {
+							setSelectedIndex(-1);
 						}}
 					>
 						{item}
