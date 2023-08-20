@@ -28,5 +28,5 @@ strong {
 }
 
 #image-backing {
-	background-image: url('gimblebg.png');
+	background-image: url('/gimblebg.png');
 }
