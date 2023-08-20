@@ -8,8 +8,8 @@ function Gimble() {
 		<>
 			<Helmet>
 				<meta charSet="utf-8" />
-				<title>CJ Home</title>
-				<link rel="canonical" href="/" />
+				<title>Gimble</title>
+				<link rel="canonical" href="/gimble" />
 			</Helmet>
 			<div id="image-backing" className="image-backing">
 				<a href="/gimble">
@@ -25,13 +25,12 @@ function Gimble() {
 					/>
 				</a>
 				<div className="main-body cat-bg-dark cat-fg-secondary">
-					<h1>404</h1>
 					<img
 						src="/gimblefavicon.png"
 						style={{
 						}}
 					/>
-					<p>NOT PUDDING</p>
+					<p>There he is!!!</p>
 				</div>
 			</div>
 		</>
