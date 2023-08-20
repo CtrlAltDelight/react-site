@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cattpuccin.css";
 import "./Home.css";
+import { NavLink } from "react-router-dom";
 
 function Home() {
 	/*let awards = [
@@ -23,10 +24,10 @@ function Home() {
 				<link rel="canonical" href="/" />
 			</Helmet>
 			<div id="image-backing" className="image-backing">
-				<a href="/gimble"><img
+				<NavLink to="/gimble"><img
 					src="/gimblefavicon.png"
 					style={{ width: "45px", height: "45px", position: 'absolute', top: '850px', left: '20px'}}
-				/></a>
+				/></NavLink>
 				<div className="main-body cat-bg-dark cat-fg-secondary">
 					<div style={{ display: "flex", margin: " 0px 0rem 1.5rem 0.5rem" }}>
 						<img
