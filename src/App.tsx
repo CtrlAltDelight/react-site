@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
@@ -15,18 +16,23 @@ function App() {
 	}, []);
 
 	return (
+	<>
+		<Helmet>
+				<link rel="icon" type="image/png" href="gimblefavicon.png" />
+		</Helmet>
 		<Router>
 			<div className="dark-theme">
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Home />} />
-						<Route path="about" element={<About />} />
+						<Route path="cv" element={<About />} />
 						<Route path="help" element={<Help />} />
 						<Route path="*" element={<NoPage />} />
 					</Route>
 				</Routes>
 			</div>
 		</Router>
+		</>
 	);
 	// Self closing syntax: <Message />
 }

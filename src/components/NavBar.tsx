@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import NavLinks from "./NavBar.json";
@@ -32,16 +31,18 @@ function NavBar({ showLinks, logoImg = null }: Props) {
 	}, []);
 */
 	//const [isDropdownOpen, setDropdownOpen] = useState(false);
-	return (
+	// set position: "sticky" on the nav tag if you want it to follow you down the page
+	return ( 
+	
 		<nav
 			className="navbar cat-bg-primary navbar-expand-lg"
-			style={{ top: 0, position: "sticky", height: "5rem" }}
+			style={{ top: 0, height: "5rem" }}
 			data-bs-theme="dark"
 		>
 			<div className="container-fluid">
 				{logoImg != null && (
 					<NavLink className="navbar-brand" to="/">
-						<img src="night_city.png" width="50" height="50" />
+						<img src={logoImg} width="50" height="50" />
 					</NavLink>
 				)}
 				<div className="" id="navbarSupportedContent">

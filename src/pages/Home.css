@@ -27,5 +27,5 @@ strong {
 }
 
 #image-backing {
-	background-color: var(--surface2);
+	background-image: url('gimblebg.png');
 }

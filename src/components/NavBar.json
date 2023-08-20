@@ -5,12 +5,8 @@
 			"route": "/"
 		},
 		{
-			"name": "About",
-			"route": "/about"
-		},
-		{
-			"name": "Help",
-			"route": "/help"
+			"name": "CV",
+			"route": "/cv"
 		}
 	]
 }

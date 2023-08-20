@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { scaleDown as Menu } from "react-burger-menu";
+import { pushRotate as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
 import NavLinks from '../components/NavBar.json'
 
@@ -16,8 +16,8 @@ function Layout() {
 					</NavLink>
 				))}
 			</Menu>
-			<main id="page-wrap">
 			<NavBar showLinks />
+			<main id="page-wrap">
 				<Outlet />
 			</main>
 		</div>
