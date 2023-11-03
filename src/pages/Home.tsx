@@ -24,15 +24,29 @@ function Home() {
 				<link rel="canonical" href="/" />
 			</Helmet>
 			<div id="image-backing" className="image-backing">
-				<NavLink to="/gimble"><img
-					src="/gimblefavicon.png"
-					style={{ width: "45px", height: "45px", position: 'absolute', top: '850px', left: '20px'}}
-				/></NavLink>
+				<NavLink to="/gimble">
+					<img
+						src="/gimblefavicon.png"
+						className="hide-on-small-screen"
+						style={{
+							width: "45px",
+							height: "45px",
+							position: "absolute",
+							top: "850px",
+							left: "20px",
+						}}
+					/>
+				</NavLink>
 				<div className="main-body cat-bg-dark cat-fg-secondary">
 					<div style={{ display: "flex", margin: " 0px 0rem 1.5rem 0.5rem" }}>
 						<img
 							src="/headshot.jpg"
-							style={{ width: "20rem", minWidth: '10rem', maxHeight: '20rem', objectFit: "cover" }}
+							style={{
+								width: "20rem",
+								minWidth: "10rem",
+								maxHeight: "20rem",
+								objectFit: "cover",
+							}}
 						/>
 						<p style={{ margin: "15px" }}>
 							<h1>Bio</h1>
@@ -51,8 +65,8 @@ function Home() {
 							Fill your quota today!
 						</p>
 					</div>
-					<br/>
-					<br/>
+					<br />
+					<br />
 					<h1>Project Info</h1>
 					<p>
 						<strong>She's The Man</strong> - Half-hour comedy series -

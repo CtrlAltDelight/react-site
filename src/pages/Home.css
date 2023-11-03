@@ -1,20 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .background-blur {
-  position: relative;
-  width: 100%; /* or your preferred width */
-  height: 500px; /* or your preferred height */
-  overflow: hidden; /* to ensure the pseudo-element doesn't overflow */
+	position: relative;
+	width: 100%; /* or your preferred width */
+	height: 500px; /* or your preferred height */
+	overflow: hidden; /* to ensure the pseudo-element doesn't overflow */
 }
 
 .background-blur::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  right: -10%;
-  bottom: -10%;
-  left: -10%;
-	background-image: url('sebastian-svenson-unsplash.jpg');
-  filter: blur(25px);
-  z-index: -1; /* to ensure the background stays behind the content */
+	content: "";
+	position: absolute;
+	top: -10%;
+	right: -10%;
+	bottom: -10%;
+	left: -10%;
+	background-image: url("sebastian-svenson-unsplash.jpg");
+	filter: blur(25px);
+	z-index: -1; /* to ensure the background stays behind the content */
 }
 
 .main-body {
@@ -28,5 +32,20 @@ strong {
 }
 
 #image-backing {
-	background-image: url('/gimblebg.png');
+	background-image: url("/gimblebg.png");
+}
+
+@media only screen and (max-width: 600px) {
+	.hide-on-small-screen {
+		display: none;
+	}
+
+	.full-width-on-small-screen {
+		width: 100%;
+		box-sizing: border-box; /* This ensures that padding and border are included in the width */
+	}
+
+	.main-body {
+		margin: 0;
+	}
 }
