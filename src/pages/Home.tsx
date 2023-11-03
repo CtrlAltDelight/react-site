@@ -38,7 +38,10 @@ function Home() {
 					/>
 				</NavLink>
 				<div className="main-body cat-bg-dark cat-fg-secondary">
-					<div style={{ display: "flex", margin: " 0px 0rem 1.5rem 0.5rem" }}>
+					<div
+						className="flex-col-on-small-screen"
+						style={{ display: "flex", margin: "0px 0rem 1.5rem 0.5rem" }}
+					>
 						<img
 							src="/headshot.jpg"
 							style={{

@@ -48,4 +48,8 @@ strong {
 	.main-body {
 		margin: 0;
 	}
+
+	.flex-col-on-small-screen {
+		flex-direction: column;
+	}
 }
