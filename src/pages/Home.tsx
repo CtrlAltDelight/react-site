@@ -23,7 +23,9 @@ function Home() {
 				<title>CJ Home</title>
 				<link rel="canonical" href="/" />
 			</Helmet>
-			<div id="image-backing" className="image-backing">
+			<div id="image-backing" className="image-backing" style={{
+				minHeight: "100vh",
+			}}>
 				<NavLink to="/gimble">
 					<img
 						src="/gimblefavicon.png"
@@ -37,7 +39,9 @@ function Home() {
 						}}
 					/>
 				</NavLink>
-				<div className="main-body cat-bg-dark cat-fg-secondary">
+				<div className="main-body cat-bg-dark cat-fg-secondary" style={{
+					minHeight: "95vh",
+				}}>
 					<div
 						className="flex-col-on-small-screen"
 						style={{ display: "flex", margin: "0px 0rem 1.5rem 0.5rem" }}

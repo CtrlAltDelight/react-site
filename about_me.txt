@@ -1,0 +1,8 @@
+I'm a computer engineer who realized too late I want to do computer science. Software is where all the fun stuff is, though I don't mind knowing about hardware.
+
+In my free time, I play bass guitar, build custom mechanical keyboards, tinker with my NeoVim config (This is most of what I do. Yes, I have a problem.), and develop websites with React.
+
+I recently made a portfolio site for my friend in the film industry. It was my first experience with a "client" even though I did it for free. I wish I had heard last Thursday's lecture where you talked about having a small working model to show to your client first because the client&nbsp;really does not know what they want, they just know they want "a website."
+
+Anyways, this is the class I am most excited for as it's the one that most aligns with my aspiration to work in the software field. Not sure if we're getting feedback based on this, but I'd be interested to hear back from you.
+
